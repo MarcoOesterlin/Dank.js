@@ -7,23 +7,30 @@ class contentDisplay extends React.Component {
 };
 
   componentDidMount(){
-    let savedWord = JSON.parse(localStorage.getItem("wordObject"));
-    console.log(savedWord);
+    // let savedWord = JSON.parse(localStorage.getItem("wordObject"));
+    // console.log(savedWord);
     
-    this.setState({
-      savedList:savedWord
-    })
+    // this.setState({
+    //   savedList:savedWord
+    // })
    };
    
    
     render() {
-      console.log(this.state.savedList)
+      const ls = JSON.parse(localStorage.getItem('wordObject'));
+      console.log(ls)
       return (
         
         
 
         <div className="contentDisplay">
-        
+          { ls.map(({ word, definition, gif }, i) => (
+            <div key={ i }>
+              <h2>{ word }</h2>
+              <p>{ definition }</p>
+              <img src={gif} alt="gif"/>
+            </div>
+          )) }
         </div>
 
 
@@ -31,6 +38,7 @@ class contentDisplay extends React.Component {
       );
     }
   }
+  
 
   export default contentDisplay
 
