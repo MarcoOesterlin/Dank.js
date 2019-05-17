@@ -6,15 +6,20 @@ import ContentDisplay from './ContentDisplay/contentDisplay';
 
 
 
-function App() {
+
+class App extends React.Component {
   
+
+
+  render(){
+
   return (
-    
     <div className="App">
-     <ContentGenerator />
-     <ContentDisplay/>
+      <ContentGenerator />
+      <ContentDisplay />
     </div>
   );
+}
 }
 
 export default App;

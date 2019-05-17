@@ -8,9 +8,10 @@ class contentGenerator extends React.Component {
     state = {
         value: '',
         result: "",
-        imgUrl: "",
+        imgUrl: ""
     };
-  
+
+    
     
 
     handleChange = (event) => {
@@ -79,7 +80,7 @@ class contentGenerator extends React.Component {
         <div id="content">
           <h2>Searched Word: {this.state.value} </h2>
           <p>Definition: {this.state.result} </p>
-          <img src={this.state.imgUrl}></img>
+          <img src={this.state.imgUrl} alt="GIF"></img>
           <button onClick={(e) => this.handleClick(e)}> Save Word </button>
         </div>
 
