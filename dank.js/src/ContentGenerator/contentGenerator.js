@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import ContentDisplay from '../ContentDisplay/contentDisplay';
 
 const apiKey = "fv255taVfA5hQO3U4b9wf5Fv2cvsmT3a";
 
@@ -8,7 +9,8 @@ class contentGenerator extends React.Component {
     state = {
         value: '',
         result: "",
-        imgUrl: ""
+        imgUrl: "",
+        lsResults: [],
     };
 
     
@@ -41,6 +43,11 @@ class contentGenerator extends React.Component {
       
     }
 
+    componentDidMount() {
+      const lsResults = JSON.parse(localStorage.getItem('wordObject'));
+      this.setState({ lsResults });
+    }
+
     handleClick(){
       let savedWord = JSON.parse(localStorage.getItem("wordObject"));
       let word = this.state.value;
@@ -61,7 +68,9 @@ class contentGenerator extends React.Component {
       savedWord.push(wordObject);
       let JsonWord = JSON.stringify(savedWord);
       localStorage.setItem("wordObject", JsonWord)
-      
+      this.setState({
+        lsResults: savedWord,
+      });
     }
 
     
@@ -84,7 +93,7 @@ class contentGenerator extends React.Component {
           <button onClick={(e) => this.handleClick(e)}> Save Word </button>
         </div>
 
-
+        <ContentDisplay data={ this.state.lsResults } />
         </div>
       );
     }

@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import ContentGenerator from './ContentGenerator/contentGenerator';
-import ContentDisplay from './ContentDisplay/contentDisplay';
 
 
 
@@ -16,7 +15,6 @@ class App extends React.Component {
   return (
     <div className="App">
       <ContentGenerator />
-      <ContentDisplay />
     </div>
   );
 }
