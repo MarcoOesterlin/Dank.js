@@ -12,9 +12,9 @@ class contentDisplay extends React.Component {
         
         
 
-        <div className="contentDisplay">
+        <div className="contentDisplay" id="paralax2">
           { data.map(({ word, definition, gif }, i) => (
-            <div key={ i }>
+            <div className="imageContainer" key={ i }>
               <h2>{ word }</h2>
               <p>{ definition }</p>
               <img src={gif} alt="gif"/>
