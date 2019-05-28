@@ -4,7 +4,7 @@ body{
   text-align:center;
   box-sizing:border-box;
   height:auto;
-  width:auto;
+  width:100%;
   color:white;
 }
 .header{
@@ -12,13 +12,19 @@ body{
   width:100%;
   background:#3D3C3C;
 }
-#paralax-1{
-  background:url("images/wallpaper1.jpg") black;
+.paralax{
   height:auto;
   width:100%;
-  background-size:contain;
   background-attachment: fixed;
+}
+#paralax-1{
+  background:url("images/wallpaper1.jpg") black;
+  background-size:contain;
   padding-top:30vh;
+  background-attachment: fixed;
+}
+#paralax-2{
+  background:#716F6F;
 }
 .searchBar{
   width:40%;
@@ -40,4 +46,26 @@ body{
   box-sizing: border-box;
   font-size:1.0em;
   border-radius:2vh;
+}
+.contentDisplay{
+  width:100%;
+  height:auto;
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+.imageContainer{
+  width:23%;
+  height:25vh;
+  margin:3% 1%;
+  display: inline;
+
+}
+.saved-image{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  box-sizing: border-box;
+  border:1px solid grey;
+  box-shadow: 6px 7px 18px 2px black;
 }
