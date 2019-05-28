@@ -11,6 +11,7 @@ class contentGenerator extends React.Component {
         result: "",
         imgUrl: "",
         lsResults: [],
+        displayResult: "hide"
     };
 
 
@@ -38,13 +39,15 @@ class contentGenerator extends React.Component {
             console.log("not found")
             this.setState({
               result: "Not Found",
-              imgUrl: "https://media.giphy.com/media/yhsRFJI75Mcqk/giphy.gif"
+              imgUrl: "https://media.giphy.com/media/yhsRFJI75Mcqk/giphy.gif",
+              displayResult: "show"
             })
 
           } else {
             this.setState({
               result: data.list[0].definition,
-              imgUrl: giphyData.data[0].images.original.url
+              imgUrl: giphyData.data[0].images.original.url,
+              displayResult: "show"
             });
           }
 

@@ -1,5 +1,5 @@
 body{
-  margin: 0; 
+  margin: 0;
   padding: 0;
   text-align:center;
   box-sizing:border-box;
@@ -68,4 +68,11 @@ body{
   box-sizing: border-box;
   border:1px solid grey;
   box-shadow: 6px 7px 18px 2px black;
+}
+.hide{
+  display:none;
+}
+
+.show{
+  display:block;
 }
