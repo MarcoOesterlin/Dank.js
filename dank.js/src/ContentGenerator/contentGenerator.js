@@ -45,7 +45,11 @@ class contentGenerator extends React.Component {
 
     componentDidMount() {
       const lsResults = JSON.parse(localStorage.getItem('wordObject'));
-      this.setState({ lsResults });
+      if(lsResults){
+        this.setState({ lsResults });
+      }
+
+
     }
 
     handleClick(){
