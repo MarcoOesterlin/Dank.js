@@ -11,6 +11,7 @@ class contentGenerator extends React.Component {
         result: "",
         imgUrl: "",
         lsResults: [],
+        displayResult: "hide"
     };
 
 
@@ -38,13 +39,15 @@ class contentGenerator extends React.Component {
             console.log("not found")
             this.setState({
               result: "Not Found",
-              imgUrl: "https://media.giphy.com/media/yhsRFJI75Mcqk/giphy.gif"
+              imgUrl: "https://media.giphy.com/media/yhsRFJI75Mcqk/giphy.gif",
+              displayResult: "show"
             })
 
           } else {
             this.setState({
               result: data.list[0].definition,
-              imgUrl: giphyData.data[0].images.original.url
+              imgUrl: giphyData.data[0].images.original.url,
+              displayResult: "show"
             });
           }
 
@@ -102,7 +105,7 @@ class contentGenerator extends React.Component {
           <input className="btn" type="submit" id="search-btn" value="Search" />
         </form>
 
-        <div id="content">
+        <div className={this.state.displayResult}>
           <h2>Searched Word: {this.state.value} </h2>
           <p>Definition: {this.state.result} </p>
           <img src={this.state.imgUrl} alt="GIF"></img>
