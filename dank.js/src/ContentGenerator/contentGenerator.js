@@ -13,17 +13,17 @@ class contentGenerator extends React.Component {
         lsResults: [],
     };
 
-    
-    
+
+
 
     handleChange = (event) => {
       this.setState({value: event.target.value});
     }
-  
+
     handleSubmit = async (event) => {
-   
+
     event.preventDefault();
-    
+
       try {
           const urbanResponse = await axios.get(`http://api.urbandictionary.com/v0/define?term=${this.state.value}`);
           const data = urbanResponse.data;
@@ -31,16 +31,31 @@ class contentGenerator extends React.Component {
 
           const giphyResponse = await axios.get(`http://api.giphy.com/v1/gifs/search?q=${this.state.value}&api_key=${apiKey}&limit=5`)
           const giphyData = giphyResponse.data
-          console.log(giphyData.data[0].images.original.url)
+          console.log(data.length === undefined)
+          console.log(giphyData.data.length === 0)
 
-          this.setState({
-            result: data.list[0].definition,
-            imgUrl: giphyData.data[0].images.original.url
-          });
+          if (data.length === undefined && giphyData.data.length === 0){
+            console.log("not found")
+            this.setState({
+              result: "Not Found",
+              imgUrl: "https://media.giphy.com/media/yhsRFJI75Mcqk/giphy.gif"
+            })
+
+          } else {
+            this.setState({
+              result: data.list[0].definition,
+              imgUrl: giphyData.data[0].images.original.url
+            });
+          }
+
+
+
+
+
       } catch (e) {
           console.log(e);
       }
-      
+
     }
 
     componentDidMount() {
@@ -57,12 +72,12 @@ class contentGenerator extends React.Component {
       let word = this.state.value;
       let definition = this.state.result
       let gif = this.state.imgUrl
-      
 
-      let wordObject = { 
-        word: word, 
-        definition: definition, 
-        gif: gif 
+
+      let wordObject = {
+        word: word,
+        definition: definition,
+        gif: gif
       }
 
       if(savedWord == null){
@@ -77,8 +92,8 @@ class contentGenerator extends React.Component {
       });
     }
 
-    
-  
+
+
     render(data) {
       return (
         <div className="paralax" id="paralax-1">
