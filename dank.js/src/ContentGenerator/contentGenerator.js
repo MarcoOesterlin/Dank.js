@@ -96,13 +96,13 @@ class contentGenerator extends React.Component {
 
     render(data) {
       return (
-        <div>
-        <form onSubmit={this.handleSubmit}>
+        <div className="paralax" id="paralax-1">
+        <form className="searchBar" onSubmit={this.handleSubmit}>
           <label>
             Word:
             <input type="text" value={this.state.value} onChange={this.handleChange} />
           </label>
-          <input type="submit" value="Search" />
+          <input className="btn" type="submit" value="Search" />
         </form>
 
         <div id="content">
