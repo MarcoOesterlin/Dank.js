@@ -1,0 +1,43 @@
+body{
+  margin: 0; 
+  padding: 0;
+  text-align:center;
+  box-sizing:border-box;
+  height:auto;
+  width:auto;
+  color:white;
+}
+.header{
+  height:10vh;
+  width:100%;
+  background:#3D3C3C;
+}
+#paralax-1{
+  background:url("images/wallpaper1.jpg") black;
+  height:auto;
+  width:100%;
+  background-size:contain;
+  background-attachment: fixed;
+  padding-top:30vh;
+}
+.searchBar{
+  width:40%;
+  height:8vh;
+  padding:none;
+  border:none;
+  border-radius: 12px;
+  margin:auto;
+  display:block;
+}
+#search-btn{
+  display:inline-block;
+  margin:10px;
+  height:6vh;
+  width:10%;
+  background:#2abb2a;
+  border:none;
+  color:white;
+  box-sizing: border-box;
+  font-size:1.0em;
+  border-radius:2vh;
+}
