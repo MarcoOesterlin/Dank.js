@@ -106,7 +106,7 @@ class contentGenerator extends React.Component {
               <input className="btn" type="submit" id="search-btn" value="Search" />
             </form>
 
-            <div id="content">
+            <div className={this.state.displayResult}>
               <h2>Searched Word: {this.state.value} </h2>
               <p>Definition: {this.state.result} </p>
               <img src={this.state.imgUrl} alt="GIF"></img>
