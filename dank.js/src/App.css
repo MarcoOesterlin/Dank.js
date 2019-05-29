@@ -6,6 +6,8 @@ body{
   height:auto;
   width:100%;
   color:white;
+  font-family: 'Archivo', sans-serif;
+  background:#716F6F;
 }
 .header{
   height:10vh;
@@ -22,6 +24,7 @@ body{
   background-size:contain;
   padding-top:30vh;
   background-attachment: fixed;
+  padding-bottom: 10vh;
 }
 #paralax-2{
   background:#716F6F;
@@ -36,6 +39,7 @@ body{
   display:block;
   box-sizing: border-box;
   text-align: left;
+  margin-bottom: 5vh;
 }
 
 
