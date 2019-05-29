@@ -101,7 +101,7 @@ class contentGenerator extends React.Component {
       return (
         <React.Fragment>
           <div className="paralax" id="paralax-1">
-            <form  onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit}>
                 <input type="text" className="searchBar" value={this.state.value} onChange={this.handleChange} />
               <input className="btn" type="submit" id="search-btn" value="Search" />
             </form>
