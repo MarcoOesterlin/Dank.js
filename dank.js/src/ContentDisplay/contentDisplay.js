@@ -3,7 +3,14 @@ import React from 'react';
 
 class contentDisplay extends React.Component {
    
-   
+    handleDelete(e, imageData){
+      let dataKey = e.target.getAttribute('image-data')
+      let data = localStorage.getItem('wordObject')
+      let JsonObject = JSON.parse(data)
+      JsonObject.splice(dataKey, 1)
+      localStorage.setItem('wordObject', JSON.stringify(JsonObject))
+      
+    }
     render() {
       const { data } = this.props;
       console.log('data', data);
@@ -13,14 +20,18 @@ class contentDisplay extends React.Component {
         
 
         <div className="contentDisplay">
-          <h1>Saved Gifs</h1>
-          { data.map(({ word, definition, gif }, i) => (
-            <div className="imageContainer" key={ i }>
-              {/* <h2>{ word }</h2> */}
-              {/* <p>{ definition }</p> */}
-              <img className="saved-image" src={gif} alt="gif"/>
-            </div>
-          )) }
+          <h2 className="header-txt">Saved Gifs</h2>
+          <div className="flex-container">
+            
+            { data.map(({ word, definition, gif }, i) => (
+              <div className="imageContainer" key={ i }>
+                {/* <h2>{ word }</h2> */}
+                {/* <p>{ definition }</p> */}
+                <button className="delete-btn" image-data={i} onClick={ (e) => this.handleDelete(e)}>X</button>
+                <img className="saved-image" src={gif} alt="gif"/>
+              </div>
+            )) }
+          </div> 
         </div>
       );
     }
