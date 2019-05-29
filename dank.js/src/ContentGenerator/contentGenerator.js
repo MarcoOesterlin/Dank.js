@@ -99,22 +99,26 @@ class contentGenerator extends React.Component {
 
     render(data) {
       return (
-        <div className="paralax" id="paralax-1">
-        <form  onSubmit={this.handleSubmit}>
-            <input type="text" className="searchBar" value={this.state.value} onChange={this.handleChange} />
-          <input className="btn" type="submit" id="search-btn" value="Search" />
-        </form>
+        <React.Fragment>
+          <div className="paralax" id="paralax-1">
+            <form  onSubmit={this.handleSubmit}>
+                <input type="text" className="searchBar" value={this.state.value} onChange={this.handleChange} />
+              <input className="btn" type="submit" id="search-btn" value="Search" />
+            </form>
 
-        <div className={this.state.displayResult}>
-          <h2>Searched Word: {this.state.value} </h2>
-          <p>Definition: {this.state.result} </p>
-          <img src={this.state.imgUrl} alt="GIF"></img>
-          <button onClick={(e) => this.handleClick(e)}> Save Word </button>
-        </div>
+            <div className={this.state.displayResult}>
+              <h2>Searched Word: {this.state.value} </h2>
+              <p>Definition: {this.state.result} </p>
+              <img src={this.state.imgUrl} alt="GIF"></img>
+              <button onClick={(e) => this.handleClick(e)}> Save Word </button>
+            </div>
+          </div>
 
-        <ContentDisplay data={ this.state.lsResults } />
-        </div>
-      );
+          <div className="paralax" id="paralax-2">
+            <ContentDisplay data={ this.state.lsResults } />
+          </div>
+        </React.Fragment>
+      )
     }
   }
 
