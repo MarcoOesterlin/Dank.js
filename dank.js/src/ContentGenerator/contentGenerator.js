@@ -16,7 +16,13 @@ class contentGenerator extends React.Component {
 
 
 
+    getStorage = () => {
+      const lsResults = JSON.parse(localStorage.getItem('wordObject'));
+      if(lsResults){
+        this.setState({ lsResults });
+      }
 
+    }
     handleChange = (event) => {
       this.setState({value: event.target.value});
     }
@@ -62,11 +68,7 @@ class contentGenerator extends React.Component {
     }
 
     componentDidMount() {
-      const lsResults = JSON.parse(localStorage.getItem('wordObject'));
-      if(lsResults){
-        this.setState({ lsResults });
-      }
-
+      this.getStorage()
 
     }
 
@@ -115,7 +117,7 @@ class contentGenerator extends React.Component {
           </div>
 
           <div className="paralax" id="paralax-2">
-            <ContentDisplay data={ this.state.lsResults } />
+            <ContentDisplay getStorage={this.getStorage} data={ this.state.lsResults } />
           </div>
         </React.Fragment>
       )
