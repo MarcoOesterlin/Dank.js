@@ -110,8 +110,8 @@ class contentGenerator extends React.Component {
               <div id="result-wrapper" className={this.state.displayResult}>
                 <img id="image-result" src={this.state.imgUrl} alt="GIF"></img>
                 <div id="urban-result">
-                  <h2 id="searched-word">Searched Word: {this.state.value} </h2>
-                  <p id="definition-word">Definition: {this.state.result} </p>
+                  <h2 id="searched-word" >Searched Word: {this.state.value} </h2>
+                  <p id="definition-word" >Definition: {this.state.result} </p>
                   <button id="save-icon" onClick={(e) => this.handleClick(e)}> Save Word </button>
 
                 </div>

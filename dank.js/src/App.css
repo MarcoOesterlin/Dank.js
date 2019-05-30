@@ -57,6 +57,8 @@ header h1{
 }
 #definition-word{
   height:50%;
+  overflow: auto;
+
 }
 #result-wrapper{
   width:100%;
