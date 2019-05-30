@@ -6,5 +6,5 @@ This project is a part of the course DA355A - Computer and Information Science: 
 
 ## Development
 *  From Project Root (/Dank.js/dank.js), execute command "npm install" with any terminal. The command will install missing dependencies.
-*  If success, execute command "npm start" with any terminal. The command will 
+*  If success, execute command "npm start" with any terminal. The command will start development server.
 
