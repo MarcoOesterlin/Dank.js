@@ -1,11 +1,11 @@
-# Motivation for choice of framework/library
+# Motivation för val av Ramverk/Bibliotek
 
-* Prior Knowledge
-* One Language For Everything (JS / JSX)
+* Tidigare Erfarenheter
+* Ett språk att förhålla sig till (JS / JSX)
 
 
 
-# Sources
+# Källor
 * https://dzone.com/articles/react-vs-angular-vs-vuejs-a-complete-comparison-gu
 
 Vi har valt att bygga en webbplats som genererar gifar utefter sökta ord.
