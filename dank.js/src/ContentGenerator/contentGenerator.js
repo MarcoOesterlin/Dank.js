@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import ContentDisplay from '../ContentDisplay/contentDisplay';
+import Header from '../Header/Header';
 
 const apiKey = "fv255taVfA5hQO3U4b9wf5Fv2cvsmT3a";
 
@@ -103,17 +104,29 @@ class contentGenerator extends React.Component {
       return (
         <React.Fragment>
           <div className="paralax" id="paralax-1">
+            <Header></Header>
+
+            <div id="result-container">
+              <div id="result-wrapper" className={this.state.displayResult}>
+                <img id="image-result" src={this.state.imgUrl} alt="GIF"></img>
+                <div id="urban-result">
+                  <h2 id="searched-word">Searched Word: {this.state.value} </h2>
+                  <p id="definition-word">Definition: {this.state.result} </p>
+                  <button id="save-icon" onClick={(e) => this.handleClick(e)}> Save Word </button>
+
+                </div>
+
+
+              </div>
+            </div>
+
+
+
             <form onSubmit={this.handleSubmit}>
-                <input type="text" className="searchBar" value={this.state.value} onChange={this.handleChange} />
+                <input type="text" className="searchBar" value={this.state.value} onChange={this.handleChange} placeholder="Enter keyword" />
               <input className="btn" type="submit" id="search-btn" value="Search" />
             </form>
 
-            <div className={this.state.displayResult}>
-              <h2>Searched Word: {this.state.value} </h2>
-              <p>Definition: {this.state.result} </p>
-              <img src={this.state.imgUrl} alt="GIF"></img>
-              <button onClick={(e) => this.handleClick(e)}> Save Word </button>
-            </div>
           </div>
 
           <div className="paralax" id="paralax-2">

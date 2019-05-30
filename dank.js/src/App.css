@@ -10,19 +10,89 @@ body{
   background:#716F6F;
 }
 .header{
-  height:10vh;
+  height:8vh;
   width:100%;
-  background:#3D3C3C;
+  box-sizing:border-box;
+  padding:0 1%;
+  line-height: 8vh;
+}
+header h1{
+  float:left;
+  font-family: 'Pacifico', cursive;
+  position:fixed;
+  padding:0;
+  margin:0;
+}
+#image-result{
+  width: 50%;
+  height:100%;
+  background:pink;
+  float:left;
+  object-fit: cover;
+}
+#urban-result{
+  width:50%;
+  height:100%;
+  background:white;
+  float:right;
+  color:grey;
+  text-align:left;
+  box-sizing:border-box;
+  padding:2%;
+}
+#save-icon{
+  width:100%;
+  height:20%;
+  background:#4caf50;
+  color:white;
+  border:none;
+  box-sizing:border-box;
+  vertical-align: text-bottom;
+  border-radius:5px;
+  cursor:pointer;
+  font-size:1.0em;
+}
+#searched-word{
+  height:10%;
+}
+#definition-word{
+  height:50%;
+}
+#result-wrapper{
+  width:100%;
+  height:100%;
+  animation: reveal 1s;
+  box-shadow: -2px -2px 12px 4px black;
+}
+@keyframes reveal {
+  from {opacity:0;}
+  to {opacity: 1;}
+}
+header a{
+  box-sizing:border-box;
+  color:white;
+  font-size:1.2em;
+  font-weight:bold;
+  text-decoration:none;
+  margin:0 1%;
+  vertical-align: text-bottom;
 }
 .paralax{
   height:auto;
   width:100%;
   background-attachment: fixed;
 }
+#result-container{
+  height:30vh;
+  width:40vw;
+  margin:3vh auto;
+  box-sizing: border-box;
+
+
+}
 #paralax-1{
-  background:url("images/wallpaper1.jpg") black;
-  background-size:contain;
-  padding-top:30vh;
+  background:url("images/wallpaper1.jpg") no-repeat center black;
+  background-size:cover;
   background-attachment: fixed;
   padding-bottom: 10vh;
 }
@@ -31,15 +101,18 @@ body{
 }
 .searchBar{
   width:40%;
-  height:8vh;
+  height:6vh;
   padding: 10px;
-  border:none;
+  border:1px solid grey;
   border-radius: 12px;
   margin:auto;
   display:block;
   box-sizing: border-box;
   text-align: left;
   margin-bottom: 5vh;
+  opacity:0.6;
+  font-size:1.3em;
+  outline: none;
 }
 
 
@@ -48,12 +121,14 @@ body{
   margin:10px;
   height:6vh;
   width:10%;
-  background:#2abb2a;
+  background:#3f5d75;
   border:none;
   color:white;
   box-sizing: border-box;
-  font-size:1.0em;
+  font-size:1.2em;
   border-radius:2vh;
+  outline:none;
+  cursor:pointer;
 }
 .contentDisplay{
   width:100%;
@@ -90,6 +165,8 @@ body{
 .header-txt{
   display:inline;
   margin-left:1%;
+  color:#d4d4d4;
+
 
 }
 .delete-btn{
