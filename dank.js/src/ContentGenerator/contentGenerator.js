@@ -16,13 +16,24 @@ class contentGenerator extends React.Component {
         displayResult: "hide",
         LightBoxStatus: "hide",
         LightBoxKey: "",
+        LightBoxImage: "",
+        LightBoxword: "",
+        LightBoxDefinition: "",
     };
 
 
     revealAlbumContent = (e, i) => {
+      let data = this.state.lsResults
+      alert(data[i]['word']) //kör på här
+      let word = data[i]['word']
+      let image = data[i]['gif']
+      let definition = data[i]['definition'];
       this.setState(
         {
           LightBoxStatus: 'show',
+          LightBoxWord: word, 
+          LightBoxImage: image,
+          LightBoxDefinition: definition,
         })
       this.setState({LightBoxKey: i})
     
@@ -117,7 +128,7 @@ class contentGenerator extends React.Component {
     render(data) {
       return (
         <React.Fragment>
-          <LightBox entryKey={this.state.LightBoxKey} reveal={this.state.LightBoxStatus} lightBoxHide={this.lightBoxHide} />
+          <LightBox definition={this.state.LightBoxDefinition} word={this.state.LightBoxWord} image={this.state.LightBoxImage} entryKey={this.state.LightBoxKey} reveal={this.state.LightBoxStatus} lightBoxHide={this.lightBoxHide} />
           <div className="paralax" id="paralax-1">
 
             <Header></Header>

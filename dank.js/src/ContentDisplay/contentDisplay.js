@@ -5,7 +5,7 @@ class contentDisplay extends React.Component {
     
     revealAlbumContent = (e, i) => {
       this.props.revealAlbumContent(e, i);
-      let dataKey = e.target.getAttribute('image-data')
+      
     }
   
     getStorage = () =>{
