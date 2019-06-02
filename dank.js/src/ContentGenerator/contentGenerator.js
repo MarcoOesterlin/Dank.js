@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import ContentDisplay from '../ContentDisplay/contentDisplay';
 import Header from '../Header/Header';
+import LightBox from '../LightBox/LightBox';
 
 const apiKey = "fv255taVfA5hQO3U4b9wf5Fv2cvsmT3a";
 
@@ -12,10 +13,23 @@ class contentGenerator extends React.Component {
         result: "",
         imgUrl: "",
         lsResults: [],
-        displayResult: "hide"
+        displayResult: "hide",
+        LightBoxStatus: "hide",
+        LightBoxKey: "",
     };
 
 
+    revealAlbumContent = (e, i) => {
+      this.setState(
+        {
+          LightBoxStatus: 'show',
+        })
+      this.setState({LightBoxKey: i})
+    
+    }
+    lightBoxHide = () => {
+      this.setState({LightBoxStatus: 'hide' })
+    }
 
     getStorage = () => {
       const lsResults = JSON.parse(localStorage.getItem('wordObject'));
@@ -103,7 +117,9 @@ class contentGenerator extends React.Component {
     render(data) {
       return (
         <React.Fragment>
+          <LightBox entryKey={this.state.LightBoxKey} reveal={this.state.LightBoxStatus} lightBoxHide={this.lightBoxHide} />
           <div className="paralax" id="paralax-1">
+
             <Header></Header>
 
             <div id="result-container">
@@ -115,8 +131,6 @@ class contentGenerator extends React.Component {
                   <button id="save-icon" onClick={(e) => this.handleClick(e)}> Save Word </button>
 
                 </div>
-
-
               </div>
             </div>
 
@@ -130,7 +144,7 @@ class contentGenerator extends React.Component {
           </div>
 
           <div className="paralax" id="paralax-2">
-            <ContentDisplay getStorage={this.getStorage} data={ this.state.lsResults } />
+            <ContentDisplay revealAlbumContent={this.revealAlbumContent} getStorage={this.getStorage} data={ this.state.lsResults } />
           </div>
         </React.Fragment>
       )

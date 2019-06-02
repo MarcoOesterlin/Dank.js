@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import ContentGenerator from './ContentGenerator/contentGenerator';
-import Header from './Header/Header';
+
 
 
 
