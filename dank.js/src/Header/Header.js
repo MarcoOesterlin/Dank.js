@@ -3,6 +3,7 @@ import React from 'react';
 class Header extends React.Component {
   state = {
     headerClass: 'header transparent',
+    navigationStyle: 'show'
   }
   
   listenScrollEvent = e => {
@@ -17,13 +18,22 @@ class Header extends React.Component {
     window.addEventListener('scroll', this.listenScrollEvent)
   }
 
+  toggleNavBar = () => {
+    if(this.state.navigationStyle === 'hide'){
+      this.setState({navigationStyle: 'show' })
+    }
+    else{
+      this.setState({navigationStyle: 'hide'})
+    }
+  }
   render() {
     return (
       <header className={this.state.headerClass}>
         <h1>DankJS</h1>
-        <nav>
+        <button onClick={this.toggleNavBar} id="bigmack"></button>      
+        <nav className={this.state.navigationStyle} >
           <a href="#paralax-1">Search</a>
-          <a href="#paralax-2">My gallery</a>          
+          <a href="#paralax-2">My gallery</a>    
         </nav>
 
       </header>

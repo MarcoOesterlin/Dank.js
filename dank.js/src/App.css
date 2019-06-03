@@ -73,9 +73,9 @@ body{
 }
 .header nav{
   width:40%;
-  display: block;
   margin:auto;
   text-align:center;
+  animation: reveal 1s;  
 }
 header h1{
   float:left;
@@ -90,6 +90,19 @@ header a{
   font-weight:bold;
   text-decoration:none;
   margin:0 5%;
+}
+#bigmack{
+  width:15%;
+  height:6vh;
+  background:url("images/menu-icon.png") no-repeat center;
+  background-size:contain;
+  border:none;
+  padding:none;
+  position:absolute;
+  top:4%;
+  right:1%;
+  display:none;
+  cursor:pointer;
 }
 .paralax{
   height:auto;
@@ -210,7 +223,6 @@ header a{
   height:100%;
   object-fit: cover;
   box-sizing: border-box;
-  border:1px solid grey;
   box-shadow: 5px 7px 20px 0px black;
 }
 .image-title{
@@ -252,6 +264,7 @@ header a{
   font-weight:bold;
   cursor:pointer;
 }
+
 @media screen and (min-width: 480px) and (max-width: 1024px){
   /*
     Tablets
@@ -345,16 +358,13 @@ header a{
     width:97%;
     margin:auto;
   }
-  /* .header nav{
-    width:40%;
-    display: block;
-    margin:auto;
-    text-align:center;
-  } */
   .delete-btn{
     position:relative;
     top:12px;
     left:46%;
+  }
+  #bigmack{
+    display:block;
   }
 }
 
