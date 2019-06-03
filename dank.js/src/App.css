@@ -25,19 +25,32 @@ body{
 #entry-container{
   width:40vw;
   height:80vh;
-  background:pink;
+  background:grey;
   margin:10vh auto;
 }
 #album-gif{
   width:100%;
   height:60%;
-  background:yellow;
+  background:grey;
   object-fit: cover;
 }
 #album-content{
   width:100%;
   height:40%;
-  background:orange;
+  background:grey;
+}
+#lightbox-close{
+  width:20vw;
+  height:20vh;
+  font-size:1.2em;
+  background:none;
+  color:white;
+  border:none;
+  cursor:pointer;
+  position:absolute;
+  top:1%;
+  right:1%;
+
 }
 .header{
   height:8vh;
