@@ -17,41 +17,34 @@ class contentGenerator extends React.Component {
     LightBoxStatus: "hide",
     LightBoxKey: "",
   };
-
   revealAlbumContent = (e, i) => {
     this.setState({
       LightBoxStatus: 'show',
       LightBoxKey: i
       })
   }
-
   lightBoxHide = () => {
     this.setState({LightBoxStatus: 'hide' })
   }
-
   getStorage = () => {
     const lsResults = JSON.parse(localStorage.getItem('wordObject'));
       if(lsResults){
         this.setState({ lsResults });
       }
     }
-
   handleChange = (event) => {
     this.setState({value: event.target.value});
   }
-
   handleSubmit = async (event) => {
     event.preventDefault();
     try {
       const urbanResponse = await axios.get(`http://api.urbandictionary.com/v0/define?term=${this.state.value}`);
       const data = urbanResponse.data;
-      
 
       const giphyResponse = await axios.get(`http://api.giphy.com/v1/gifs/search?q=${this.state.value}&api_key=${apiKey}&limit=5`)
       const giphyData = giphyResponse.data
-      
-    
-      if (data.length === undefined || giphyData.data.length === 0){
+
+      if (data.length === undefined && giphyData.data.length === 0){
         this.setState({
           result: "Not Found",
           imgUrl: "https://media.giphy.com/media/yhsRFJI75Mcqk/giphy.gif",
@@ -59,8 +52,15 @@ class contentGenerator extends React.Component {
         })
       }
       else {
+        let wordResult = ""
+        if(data.list.length === 0){
+          wordResult = "Not found"
+        }
+        else{
+          wordResult = data.list[0].definition;
+        }
         this.setState({
-        result: data.list[0].definition,
+        result: wordResult,
         imgUrl: giphyData.data[0].images.original.url,
         displayResult: "show"
         });
@@ -70,11 +70,9 @@ class contentGenerator extends React.Component {
       console.log(e);
     }
   }
-
   componentDidMount() {
     this.getStorage()
   }
-
   handleClick(){
     let savedWord = JSON.parse(localStorage.getItem("wordObject"));
     let word = this.state.value;
