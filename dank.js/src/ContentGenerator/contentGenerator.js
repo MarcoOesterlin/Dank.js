@@ -40,15 +40,13 @@ class contentGenerator extends React.Component {
     try {
       const urbanResponse = await axios.get(`http://api.urbandictionary.com/v0/define?term=${this.state.value}`);
       const data = urbanResponse.data;
-      console.log(data.list[0].definition);
+      
 
       const giphyResponse = await axios.get(`http://api.giphy.com/v1/gifs/search?q=${this.state.value}&api_key=${apiKey}&limit=5`)
       const giphyData = giphyResponse.data
-      console.log(data.length === undefined)
-      console.log(giphyData.data.length === 0)
-
+      
+    
       if (data.length === undefined && giphyData.data.length === 0){
-        console.log("not found")
         this.setState({
           result: "Not Found",
           imgUrl: "https://media.giphy.com/media/yhsRFJI75Mcqk/giphy.gif",
