@@ -25,7 +25,7 @@ class contentDisplay extends React.Component {
 
     render() {
       const { data } = this.props;
-      console.log('data', data);
+      
       
       return (
         
