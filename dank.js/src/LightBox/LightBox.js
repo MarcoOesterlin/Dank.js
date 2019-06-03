@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 class LightBox extends React.Component {
     state = {
         key: this.props.key,
@@ -19,23 +18,7 @@ class LightBox extends React.Component {
         return 1
     }
 
-    // getStorage = () =>{
-    //   this.props.getStorage();
-    // }
-    
-    // handleDelete(e, imageData){
-    //   let dataKey = e.target.getAttribute('image-data')
-    //   let data = localStorage.getItem('wordObject')
-    //   let JsonObject = JSON.parse(data)
-    //   JsonObject.splice(dataKey, 1)
-    //   localStorage.setItem('wordObject', JSON.stringify(JsonObject))
-    //   this.getStorage()
-      
-    // }
-
-
     render() {
-
       return (
         <div id="bg-dark" className={this.props.reveal} onClick={ this.props.lightBoxHide}>
             <div id="entry-container">
@@ -49,10 +32,8 @@ class LightBox extends React.Component {
         </div>
       );
     }
-  }
-  
-
-  export default LightBox
+}
+export default LightBox
 
 
   
