@@ -17,24 +17,29 @@ class contentGenerator extends React.Component {
     LightBoxStatus: "hide",
     LightBoxKey: "",
   };
+
   revealAlbumContent = (e, i) => {
     this.setState({
       LightBoxStatus: 'show',
       LightBoxKey: i
       })
   }
+
   lightBoxHide = () => {
     this.setState({LightBoxStatus: 'hide' })
   }
+  
   getStorage = () => {
     const lsResults = JSON.parse(localStorage.getItem('wordObject'));
       if(lsResults){
         this.setState({ lsResults });
       }
     }
+
   handleChange = (event) => {
     this.setState({value: event.target.value});
   }
+
   handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -65,9 +70,11 @@ class contentGenerator extends React.Component {
       console.log(e);
     }
   }
+
   componentDidMount() {
     this.getStorage()
   }
+
   handleClick(){
     let savedWord = JSON.parse(localStorage.getItem("wordObject"));
     let word = this.state.value;
