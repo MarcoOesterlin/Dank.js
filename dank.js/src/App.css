@@ -52,6 +52,7 @@ body{
   right:1%;
 }
 .header{
+  background-color:none;
   height:8vh;
   width:100%;
   box-sizing:border-box;
@@ -62,6 +63,13 @@ body{
   left:0;
   z-index:9;
   text-align:center;
+  -webkit-transition: background-color 0.3s ease-out;
+}
+.colored{
+  background-color:black;
+}
+.transparent{
+  background-color:none;
 }
 .header nav{
   width:40%;
