@@ -4,6 +4,8 @@
 * Ett språk att förhålla sig till (JS / JSX)
 * Popularitet på arbetsmarknaden
 * Struktur (MVC/Virtual Dom)
+* Mest eftersökta språket bland utvecklare(React 21.3%, Angular 14.3%),
+* Stort Community
 
 
 Vi har valt att bygga en webbplats som genererar gifar utefter sökta ord.
@@ -20,5 +22,6 @@ Projektet är gjort i React, ett språk som gruppmedlemmarna antingen hade lite 
 * https://www.quora.com/What-are-the-pros-and-cons-of-the-MVC-pattern
 * https://medium.com/zerotomastery/tech-trends-showdown-react-vs-angular-vs-vue-61ffaf1d8706
 * https://www.codeinwp.com/blog/angular-vs-vue-vs-react/
+* https://insights.stackoverflow.com/survey/2018
 
 
