@@ -220,7 +220,7 @@ header a{
   margin:0;
   text-align:center;
   width:100%;
-  background:#000000eb;
+  background:#c1c1c1cf;
   vertical-align:bottom;
   position:relative;
   top:-7vh;
@@ -251,6 +251,17 @@ header a{
   box-shadow: 5px 7px 20px 0px black;
   font-weight:bold;
   cursor:pointer;
+}
+@media screen and (min-width: 480px) and (max-width: 1024px){
+  /*
+    Tablets
+  */
+  .searchBar, #search-btn{
+    width:60vw;
+  }
+  .imageContainer{
+    width:48%;
+  }
 }
 @media screen and (max-width: 480px) {
     /*
