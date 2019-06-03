@@ -28,7 +28,7 @@ class contentGenerator extends React.Component {
   lightBoxHide = () => {
     this.setState({LightBoxStatus: 'hide' })
   }
-  
+
   getStorage = () => {
     const lsResults = JSON.parse(localStorage.getItem('wordObject'));
       if(lsResults){
@@ -51,7 +51,7 @@ class contentGenerator extends React.Component {
       const giphyData = giphyResponse.data
       
     
-      if (data.length === undefined && giphyData.data.length === 0){
+      if (data.length === undefined || giphyData.data.length === 0){
         this.setState({
           result: "Not Found",
           imgUrl: "https://media.giphy.com/media/yhsRFJI75Mcqk/giphy.gif",
