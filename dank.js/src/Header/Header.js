@@ -5,8 +5,11 @@ class Header extends React.Component {
     return (
       <header className="header">
         <h1>DankJS</h1>
+        <nav>
           <a href="#paralax-1">Search</a>
-          <a href="#paralax-2">My gallery</a>
+          <a href="#paralax-2">My gallery</a>          
+        </nav>
+
       </header>
     );
   }

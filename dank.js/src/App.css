@@ -11,7 +11,7 @@ body{
   color:white;
   font-family: 'Archivo', sans-serif;
   background:#716F6F;
-  background:whitesmoke;
+  background:#dadada;
 }
 #bg-dark{
   width:100%;
@@ -50,7 +50,6 @@ body{
   position:absolute;
   top:1%;
   right:1%;
-
 }
 .header{
   height:8vh;
@@ -62,6 +61,13 @@ body{
   top:0;
   left:0;
   z-index:9;
+  text-align:center;
+}
+.header nav{
+  width:40%;
+  display: block;
+  margin:auto;
+  text-align:center;
 }
 header h1{
   float:left;
@@ -75,8 +81,7 @@ header a{
   font-size:1.2em;
   font-weight:bold;
   text-decoration:none;
-  margin:0 1%;
-  vertical-align: text-bottom;
+  margin:0 5%;
 }
 .paralax{
   height:auto;
@@ -151,7 +156,7 @@ header a{
   display:block;
   box-sizing: border-box;
   text-align: left;
-  margin-bottom: 5vh;
+  margin-bottom: 2vh;
   opacity:0.6;
   font-size:1.3em;
   outline: none;
@@ -161,7 +166,7 @@ header a{
   margin:10px;
   height:6vh;
   width:10%;
-  background:#3f5d75;
+  background:#0f72c1;
   border:none;
   color:white;
   box-sizing: border-box;
@@ -171,7 +176,7 @@ header a{
   cursor:pointer;
 }
 #paralax-2{
-  background:#716F6F;
+  background:#dadada;
 }
 .contentDisplay{
   width:100%;
@@ -201,13 +206,16 @@ header a{
   box-shadow: 5px 7px 20px 0px black;
 }
 .image-title{
+  height:7vh;
   padding:5% 0;
+  box-sizing: border-box;
   margin:0;
   text-align:center;
   width:100%;
   background:#000000eb;
+  vertical-align:bottom;
   position:relative;
-  top:-30%;
+  top:-7vh;
 }
 .hide{
   display:none;
@@ -217,8 +225,8 @@ header a{
 }
 .header-txt{
   display:inline;
-  margin-left:1%;
-  color:#d4d4d4;
+  margin:8vh 0 0 1%;
+  color:#737373;
 }
 .delete-btn{
   background:#3D3C3C;
@@ -289,16 +297,45 @@ header a{
     width:95%;
     border:none;
   }
+  #paralax-2{
+    text-align: center;
+  }
   .saved-image{
-    width:100%;
+    width:97%;
+    margin:auto;
     height:100%;
+  }
+  .contentDisplay{
+    text-align: center;
   }
   .flex-container {
     display:block;
+    width:97%;
+    margin:auto;
   }
   .imageContainer{
     width:97%;
     height:25vh;
+    margin:auto;
+  }
+  .header-txt{
+    display:inline;
+    margin:8vh 0 0 3%;
+  }
+  .image-title{
+    width:97%;
+    margin:auto;
+  }
+  /* .header nav{
+    width:40%;
+    display: block;
+    margin:auto;
+    text-align:center;
+  } */
+  .delete-btn{
+    position:relative;
+    top:12px;
+    left:46%;
   }
 }
 

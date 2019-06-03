@@ -25,7 +25,7 @@ class contentDisplay extends React.Component {
     return (
       
       <div className="contentDisplay" >
-        <h2 className="header-txt">Saved Gifs</h2>
+        <h2 className="header-txt">My gallery</h2>
         <div className="flex-container">
             
           { data.map(({ word, definition, gif }, i) => (
