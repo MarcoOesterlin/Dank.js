@@ -107,12 +107,18 @@ class contentGenerator extends React.Component {
       lsResults: savedWord,
     });
   }
+  galleryMove = (e) => {
+    let index = e.target.getAttribute('data-key')
+    console.log(index)
+    this.revealAlbumContent(e, index)
+    e.stopPropagation()
+  }
 
   render(data) {
     return (
       <React.Fragment>
         
-        <LightBox definition={this.state.LightBoxDefinition} word={this.state.LightBoxWord} image={this.state.LightBoxImage}  entryKey={this.state.LightBoxKey} reveal={this.state.LightBoxStatus} lightBoxHide={this.lightBoxHide} />
+        <LightBox galleryMove={this.galleryMove} maxLength={this.state.lsResults.length} definition={this.state.LightBoxDefinition} word={this.state.LightBoxWord} image={this.state.LightBoxImage}  entryKey={this.state.LightBoxKey} reveal={this.state.LightBoxStatus} lightBoxHide={this.lightBoxHide} />
         
         <div className="paralax" id="paralax-1">
           <Header></Header>

@@ -27,6 +27,7 @@ class Header extends React.Component {
     }
   }
   render() {
+
     return (
       <header className={this.state.headerClass}>
         <h1>DankJS</h1>
