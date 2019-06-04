@@ -226,6 +226,7 @@ header a{
   cursor:pointer;
   overflow:none;
   transition: transform .3s linear;
+
 }
 .saved-image{
   width:100%;
@@ -233,6 +234,7 @@ header a{
   object-fit: cover;
   box-sizing: border-box;
   box-shadow: 5px 7px 20px 0px black;
+  border-radius:5px;
 }
 .imageContainer:hover{
   transform: scale(1.05)
@@ -248,6 +250,8 @@ header a{
   vertical-align:bottom;
   position:relative;
   top:-7vh;
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;
 }
 .hide{
   display:none;
@@ -261,8 +265,8 @@ header a{
   color:#737373;
 }
 .delete-btn{
-  background:#3D3C3C;
-  color:red;
+  background:#b93636;
+  color:white;
   border-radius:100%;
   border: none;
   display:relative;
