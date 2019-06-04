@@ -224,6 +224,8 @@ header a{
   display: inline;
   text-align:right;
   cursor:pointer;
+  overflow:none;
+  transition: transform .3s linear;
 }
 .saved-image{
   width:100%;
@@ -231,6 +233,9 @@ header a{
   object-fit: cover;
   box-sizing: border-box;
   box-shadow: 5px 7px 20px 0px black;
+}
+.imageContainer:hover{
+  transform: scale(1.05)
 }
 .image-title{
   height:7vh;
@@ -366,6 +371,9 @@ header a{
     width:97%;
     margin:auto;
     height:100%;
+  }
+  .saved-image:hover{
+    transform:scale(1.5)
   }
   .contentDisplay{
     text-align: center;

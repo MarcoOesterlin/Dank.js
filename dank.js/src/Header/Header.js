@@ -7,7 +7,7 @@ class Header extends React.Component {
   }
   
   listenScrollEvent = e => {
-    if (window.scrollY > window.innerHeight/3 ) {
+    if (window.scrollY > 30 ) {
       this.setState({headerClass: 'header colored'})
     } else {
       this.setState({headerClass: 'header transparent'})
