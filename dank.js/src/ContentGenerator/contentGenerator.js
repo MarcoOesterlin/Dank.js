@@ -109,7 +109,6 @@ class contentGenerator extends React.Component {
   }
   galleryMove = (e) => {
     let index = e.target.getAttribute('data-key')
-    console.log(index)
     this.revealAlbumContent(e, index)
     e.stopPropagation()
   }
