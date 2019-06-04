@@ -23,5 +23,8 @@ Projektet är gjort i React, ett språk som gruppmedlemmarna antingen hade lite 
 * https://medium.com/zerotomastery/tech-trends-showdown-react-vs-angular-vs-vue-61ffaf1d8706
 * https://www.codeinwp.com/blog/angular-vs-vue-vs-react/
 * https://insights.stackoverflow.com/survey/2018
+* https://github.com/angular/angular
+* https://github.com/facebook/react
+* https://github.com/vuejs/vue
 
 
