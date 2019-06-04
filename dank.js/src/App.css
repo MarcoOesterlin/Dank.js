@@ -18,9 +18,7 @@ body{
   position:fixed;
   background:#000000cf;
   z-index:10;
-  /* display:none; */
   animation: reveal 1s; 
-
 }
 .album-nav{
   position:absolute;
@@ -70,7 +68,7 @@ body{
 #lightbox-close{
   width:20vw;
   height:20vh;
-  font-size:1.2em;
+  font-size:3em;
   background:none;
   color:white;
   border:none;
@@ -78,6 +76,7 @@ body{
   position:absolute;
   top:1%;
   right:1%;
+  outline:none;
 }
 .header{
   background-color:none;
@@ -338,6 +337,33 @@ header a{
   #definition-word{
     font-size:1.3em;
   }
+  #entry-container{
+    width:98%;
+  }
+  #lightbox-close{
+    margin-top:-10%;
+  }
+  .album-nav{
+    width:30vw;
+    height:10vh;
+    background-size:cover;
+    transition:none;
+  }
+  #album-nav-next{
+    right:1%;
+  }
+  #album-nav-last{
+    left:1%;
+  }
+  .album-nav:hover{
+    transform: scale(1);
+  }
+  .saved-image{
+    transition:none;
+  }
+  .saved-image:hover{
+    transform:none;
+  }
 }
 @media screen and (max-width: 480px) {
     /*
@@ -432,5 +458,34 @@ header a{
   #bigmack{
     display:block;
   }
+  #entry-container{
+    width:98%;
+  }
+  #lightbox-close{
+    margin-top:-10%;
+  }
+  .album-nav{
+    width:30vw;
+    height:10vh;
+    background-size:cover;
+    transition:none;
+  }
+  #album-nav-next{
+    right:1%;
+  }
+  #album-nav-last{
+    left:1%;
+  }
+  .album-nav:hover{
+    transform: scale(1);
+  }
+  .saved-image{
+    transition:none;
+  }
+  .saved-image:hover{
+    transform:none;
+  }
+
+
 }
 

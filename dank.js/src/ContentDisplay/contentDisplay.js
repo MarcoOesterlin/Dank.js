@@ -20,6 +20,7 @@ class contentDisplay extends React.Component {
     this.getStorage()
     e.stopPropagation();
   }
+
   
   render() {
     const { data } = this.props;

@@ -8,6 +8,9 @@ class LightBox extends React.Component {
     galleryMove = (e) =>{
         this.props.galleryMove(e);
     }
+    removePropagation(e){
+        e.stopPropagation();
+      }
 
     render() {
       return (
@@ -17,7 +20,7 @@ class LightBox extends React.Component {
             }
 
             <button id="lightbox-close" onClick={this.lightBoxHide}>X</button>
-            <div id="entry-container">
+            <div id="entry-container" onClick={ (e) => this.removePropagation(e)}>
                 <img id="album-gif" src={this.props.image} alt="Saved Gif">
                 </img>
                 <div id="album-content">
