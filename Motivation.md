@@ -31,4 +31,4 @@ Projektet är gjort i React, ett språk som gruppmedlemmarna antingen hade lite 
 
 # APIER
 * https://developers.giphy.com/
-* http://api.urbandictionary.com/v0/define?term=word (Ingen direkt dokumentation, men lätt att förstå)
+* http://api.urbandictionary.com/v0/define?term=word (Ingen direkt officiel dokumentation, men lätt att förstå)
